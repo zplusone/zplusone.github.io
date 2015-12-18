@@ -171,6 +171,60 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/19/hello-world/" class="article-date">
+  	<time datetime="2015-12-18T16:26:52.000Z" itemprop="datePublished">2015-12-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/19/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/19/hello-world/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-String-API" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -197,32 +251,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>字符串是我们平时开发中用的最多的数据类型，之前在开发中，不同语言之间切换，如果没有对比去记忆，很难深刻记住不同语言的字符串处理API，每次还得去查文档，严重影响开发速度。为了更好地记忆各个语言的字符串处理方法，本文应运而生。</p>
-<h2 id="字符串定义">字符串定义</h2><h3 id="Java">Java</h3><blockquote>
-<p>java的String是jdk自带的类，位于<code>java.lang.String</code>包中，<code>final</code>类型</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String f = <span class="keyword">new</span> String();</span><br><span class="line"></span><br><span class="line">String s = <span class="string">"abc"</span>; <span class="comment">//必须是双引号,单引号表示字符char</span></span><br></pre></td></tr></table></figure>
-<h3 id="C++">C++</h3><blockquote>
-<p>C++标准的string需要引入头文件<code>string</code></p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;string&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">string</span> str = <span class="string">"abc"</span>; <span class="comment">//必须双引号，单引号表示字符char</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Python">Python</h3><blockquote>
-<p>python中得字符串既可以是单引号，也可以是双引号</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str=<span class="string">'we are family'</span></span><br></pre></td></tr></table></figure>
-<h3 id="Shell">Shell</h3><blockquote>
-<p>shell的字符串类似于<code>python</code></p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str=<span class="string">'ok, yes'</span></span><br></pre></td></tr></table></figure>
-<h2 id="字符串取长度">字符串取长度</h2><h3 id="Java-1">Java</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">"abc"</span>;</span><br><span class="line"><span class="keyword">int</span> size = str.length(); <span class="comment">// length,size傻傻分不清楚</span></span><br></pre></td></tr></table></figure>
-<h3 id="C++-1">C++</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str=<span class="string">"abc"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//两个都行</span></span><br><span class="line"><span class="keyword">size_t</span>ype size = str.size();</span><br><span class="line"><span class="keyword">size_t</span>ype length = str.length();</span><br></pre></td></tr></table></figure>
-<h3 id="Python-1">Python</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="Shell-1">Shell</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line"><span class="comment">##字符串查找</span></span><br><span class="line">&gt;java的`String`主要查找函数有`indexOf`、`lastIndexOf`和`startsWith`、`endsWith`，列出一些比较有代表性的，具体参考jdk文档。</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">//正向查找index</span><br><span class="line">public int indexOf(String str, int fromIndex);</span><br><span class="line"></span><br><span class="line">//此处竟然是int</span><br><span class="line">public int indexOf(int char);</span><br><span class="line"></span><br><span class="line">//反向查找lastIndexOf</span><br><span class="line">public int lastIndexOf(String str);</span><br><span class="line"></span><br><span class="line">//前缀</span><br><span class="line">public boolean startsWith(String prefix, int toffset);</span><br><span class="line"></span><br><span class="line">//后缀</span><br><span class="line">public boolean endsWith(String suffix);</span><br></pre></td></tr></table></figure>
-<h2 id="字符串截取">字符串截取</h2><h3 id="Java-2">Java</h3><blockquote>
-<p>字符串截取的结果return返回的新字符串，不会对原字符串截取。</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//此处的参数为index</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">substring</span><span class="params">(<span class="keyword">int</span> beginIndex)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果需要对源字符串做截取操作，需要再赋值</span></span><br><span class="line">String str = <span class="string">"abc1234"</span>;</span><br><span class="line">str=str.substring(<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="字符串替换">字符串替换</h2><h3 id="Java-3">Java</h3><h2 id="与其他类型的转换与格式化">与其他类型的转换与格式化</h2><h2 id="字符串比较">字符串比较</h2>
+        <p>字符串是我们平时开发中用的最多的数据类型，之前在开发中，不同语言之间切换，如果没有对比去记忆，很难深刻记住不同语言的字符串处理API，每次还得去查文档，严重影响开发速度。为了更好地记忆各个语言的字符串处理方法，本文应运而生。<br>
       
     </div>
     
@@ -236,65 +265,9 @@
       
 
       
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-wish" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/08/04/wish/" class="article-date">
-  	<time datetime="2015-08-04T15:51:00.000Z" itemprop="datePublished">2015-08-04</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/04/wish/">再见，祝好！</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天下午拿到的离职证明，从14年4月入职到15年8月24日，不到一年四个月。虽然很难说出再见，但是天下没有不散的宴席，这一天迟早会来的，只是没有预料到会这么快。自此，我的第一份工作划了个句号，带着极其复杂的心情。</p>
-<p>13年9月，与当年那一届的其他应届生一样，开始了自己漫长纠结的求职之旅。由于自己的没心没肺，也可能是准备不足，过程并不是很顺利，但是人人给了我人生中第一个offer。各种阴差阳错，最终来了人人。其中痛苦纠结的过程，只有自己最清楚。</p>
-<p>入职之前，我就听说过公司的很多问题，甚至有人说<code>人都走完了，还来这干嘛</code>，那会其实心里也很失望的。对于一个刚入社会的新人，第一个公司竟然是这么个情况，我的心理实在不是滋味。我还跑到知乎上去提了个问题，这个问题还得到了当时公司内的人回答，让我当时觉得公司还是有很多靠谱的人在做着靠谱的事。慢慢地也就接受了公司不景气这个事实。</p>
-<p>入职之后，我觉得自己好幸运，因为我来了一个特别nice的团队，做着一些比较有价值的事情。首先，我们团队还是有很多事情可以做的，我们从无到有搭建一整个广告后台系统，虽然我只是一个打酱油的应届生，但是通过参与后台系统的开发，学到了很多东西。来公司之前，我一行Java代码都没写过，所有东西都是从0开始学习，那会每天白天在公司干活，晚上还回去啃书，觉得自己成长很快。其次，整个团队氛围是很和谐的，琦鸿、宇阳、胜利、阿哥、龙哥、迪哥、波哥、涵仔，玥姐，还有后来的爱春，都是很赞的人，相处都十分愉快。怀念那会每天中午去木桶饭吃饭的日子，还有美岸（要不哥机智用团购，你们还傻傻地原价掏钱）。那会我们会调侃龙哥和玥姐，会八卦波波哥的女神和岳父，会被二春的二给逗的不行，会嘲笑哥的骑车漏风，扯一些扯不清的基情。去年一年，我们没有一个离职的小伙伴，一起度过了很愉快的一年。</p>
-<p>毕竟公司不太景气，离职是迟早的事。后来就陆续有小伙伴走了，所以离职也是情理之中。只是觉得自己很幸运，能够找到目前的工作，感恩。怀念以前在人人的日子，感谢那些对我提供过帮助的人，珍惜当前所拥有的一切。加油！祝各位小伙伴事业蒸蒸日上，爱情幸福美满！祝前东家一切都好！</p>
-<p>zplusone</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人选择/">个人选择</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/职业生涯/">职业生涯</a></li></ul>
-	</div>
-
-      
-
+        <p class="article-more-link">
+          <a  href="/2015/08/04/String-API/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -336,23 +309,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天跟一个前同事聊了聊，最近他忙着创业，好久不见，聊了很多。</p>
-<h2 id="创业">创业</h2><p>他目前在创业，所以我们少不了聊这个话题。其中聊了很多关于他目前的这个项目，O2O的创业方向。目前O2O这个方向是很火热，但是热并不代表创业就很容易。以前读书的时候，我可以一腔热血，两眼放光的说<code>我以后一定要去创业，创出属于自己的一片天</code>，但是实际上，出了社会才知道，不是你想的那么简单。</p>
-<p>同事是一个比较有想法的人，也敢于付出实践，这点我很钦佩。如果说你下定决心去做一件事，那一定要坚持去把它做好。创业需要的也就是这种决心，不给自己留后路，一路走到底。为创业付出也是巨大的，自己为自己打工，经济压力大，工作强度也大，而且各个方面还需要自己操心，所以一般的人可能都是嘴皮上嚷嚷着要创业，实际上却永远走不出那一步。</p>
-<p>其实创业对于我来说，也一直是个梦。找工作的时候，我也想过试试一些创业公司，但是自己深入思考就会发现，自己并不适合创业公司：</p>
-<ul>
-<li>对于创业公司而言，生存下去是最重要的。所以他们可能需要的是一个能马上能快速搞定项目的熟手，而不是一个需要成长，在这行经验还不够丰富的“潜力股”</li>
-<li>创业公司不稳定，不利于新人的成长，北京的创业公司如此多，每天估计都有倒下的吧，我可不想还没进去热身，公司就黄了</li>
-<li>我自己目前也缺乏独挡一面的能力，需要一个技术大牛带着打怪升级</li>
-</ul>
-<h2 id="成长">成长</h2><p>除了创业的话题，还聊了一些关于个人成长的。可能最近我也是经历一些事情，思考了很多东西，所以自己比以前的想法也成熟了些。我们之间，还是有很多观点类似的。所以我一直觉得，我现在更适合一个好的平台、一个好的机会去提升自己的能力，让自己慢慢成长为一个能够独当一面的技术，然后再去考虑其他创业的机会。</p>
-<p>以我目前的水平，是不能够支撑起一些不合适的东西。我目前的想法就是，找一个好平台、一个好机会，多多提高自己的技术能力。虽然说我们做技术的思维不能仅仅局限于技术本身，但是以我目前的资历，我个人觉得我还不能够支持我去做技术之外的事情。也许我有可能把它做的还不错，但是我追求的是<code>以技术作为突破口，不仅仅局限于技术层面，去做一些更有意义的事情。</code></p>
-<p>其实我们很多做技术的人都有一个很大的问题，就是仅仅将自己的思维局限于技术这个小小的局部，导致思维很局限。一叶障目，不见泰山。</p>
-<p>其实技术只是实现价值的工具，我们的最终的目的是使用技术去更好地服务于人，为人们创造价值，今日有感，希望共勉。最后引用人生赢家强东哥说的一句话：</p>
-<blockquote>
-<p>我觉得踏踏实实、能够创造一定的价值，这个很重要。从小的时候开始，我就一直坚持不会把大把时间放在玩上，从上学，到工作，我都是希望每天忙忙碌碌，有事做，让这一生活得有价值。做公司也是如此，只要我认为我做的事情是有价值的、我喜欢的，确确实实能够为这个行业创造一些价值的话，我就会坚信去做，不管是花10年、20年。</p>
-</blockquote>
-
+        <p>今天跟一个前同事聊了聊，最近他忙着创业，好久不见，聊了很多。<br>
       
     </div>
     
@@ -365,6 +322,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/08/04/kfc-meeting/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -407,16 +368,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>自从参加工作以后，一直有一个想法就是想写一些自己的基础类库，工具类吧啦吧啦之类的，但是越到现在越发现，这个想法是多余了的。越来越觉得<code>Java</code>的强大之处在于你想要的东西或者想造的轮子，在某一天，突然得知原来早就有了现成的十分健全的库可供使用，不得不感叹<code>Java</code>的大而全，也发现自己的积累不足。</p>
-<p>这不，<code>commons-lang</code>就是一个，平时用的比较多的API，mark之。</p>
-<h2 id="简介">简介</h2><p>引用官网<a href="http://commons.apache.org/proper/commons-lang/" target="_blank" rel="external">Apache Commons Lang</a></p>
-<blockquote>
-<p>Lang provides a host of helper utilities for the java.lang API, notably String manipulation methods, basic numerical methods, object reflection, concurrency, creation and serialization and System properties. Additionally it contains basic enhancements to java.util.Date and a series of utilities dedicated to help with building methods, such as hashCode, toString and equals.</p>
-</blockquote>
-<p>API文档URL为<a href="http://commons.apache.org/proper/commons-lang/javadocs/api-3.4/index.html" target="_blank" rel="external">commons-lang/javadocs/api-3.4</a>，目前最新版本为<code>3.4</code>，需要在<strong>maven</strong>中引入以下配置</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">groupId</span>&gt;</span>org.apache.commons<span class="tag">&lt;/<span class="title">groupId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">artifactId</span>&gt;</span>commons-lang3<span class="tag">&lt;/<span class="title">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">version</span>&gt;</span>3.4<span class="tag">&lt;/<span class="title">version</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>其中，记录一些最常用的类吧。</p>
-<h2 id="StringUtils">StringUtils</h2><p>这个工具类真是让我有一种相见恨晚的感觉，自从用上后，再也不用担心字符串的空指针异常啦。几乎封装了所有的<code>String</code>类的API，只是把<code>String</code>作为参数传值处理。</p>
-
+<p>这不，<code>commons-lang</code>就是一个，平时用的比较多的API，mark之。<br>
       
     </div>
     
@@ -429,6 +381,68 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/08/04/awesome-common-lang/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-wish" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/04/wish/" class="article-date">
+  	<time datetime="2015-08-04T15:51:00.000Z" itemprop="datePublished">2015-08-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/04/wish/">再见，祝好！</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天下午拿到的离职证明，从14年4月入职到15年8月24日，不到一年四个月。虽然很难说出再见，但是天下没有不散的宴席，这一天迟早会来的，只是没有预料到会这么快。自此，我的第一份工作划了个句号，带着极其复杂的心情。<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人选择/">个人选择</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/职业生涯/">职业生涯</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/08/04/wish/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -472,32 +486,9 @@
       
         <p>早就有自己建一个个人博客的想法了，一直因为各种原因没有去执行，主要是因为「懒」。最近公司事情也不太多，因此突然心血来潮，去网上搜了一堆教程后，参考了这篇博文：</p>
 <blockquote>
-<p><a href="http://litten.github.io/2014/08/31/hexo-theme-yilia/" target="_blank" rel="external">Hexo主题Yilia</a></p>
+<p><a href="http://litten.github.io/2014/08/31/hexo-theme-yilia/">Hexo主题Yilia</a></p>
 </blockquote>
-<p>在此表示感谢。捣腾了一下午，顺带把Mardown学了下，总算是把博客搭建好了，剩下的就等着填充博客内容了（来日方长^_^）。</p>
-<h2 id="我来挑刺">我来挑刺</h2><p>毕竟现在已经有了各种博客网站，为什么还要自己搭建一个呢，主要是基于以下几点：</p>
-<ul>
-<li>目前的博客网站的阅读体验非常差：广告满屏飞，博客样式和排版十分难看，编辑器十分难用</li>
-<li>很多博客不支持<strong>Markdown</strong>，也不能代码高亮，这对一个coder来说是致命的</li>
-<li>博文不能乱写否则会被「和谐」，呵呵，你懂的</li>
-</ul>
-<h2 id="自己DIY">自己DIY</h2><p>自己建博客好处多多啊，就是刚开始可能麻烦点，只要搭建好了，后面就好说，万事开头难嘛，既然是自己建的博客：</p>
-<ul>
-<li>可以自己定义各种主题，DIY可玩性更高</li>
-<li>作为一个coder，这年头没有个人博客都不好意思说你是coder了</li>
-<li>使用markdown排版，最近刚接触到<strong>Markdown</strong>，只能用四个字来形容了「相见恨晚」，完全秒杀各种编辑器了，让我有了写博客的欲望</li>
-<li>自己的博客想些啥就写啥，反正托管到github上，再也不用担心无缘无故被和谐啦</li>
-</ul>
-<h2 id="为啥要写博客">为啥要写博客</h2><p>从小我语文就不好，作文更是从小就被称为流水账，每次语文考试作为都是及格分，但是这些都不能影响我写博客的热情，好不容易找到一件能让自己好好做的事情呢。</p>
-<h3 id="沉下心做事情">沉下心做事情</h3><p>我觉得我自己是一个很容易<strong>浮躁</strong>的人，也因此吃过许多亏。读书的时候，每当我感觉自己有些飘飘然的时候，我就回去自习室或者图书馆，不求能学到东西，只求让自己的内心<strong>沉静</strong>下来，正如<code>功夫熊猫</code>中所追求的：</p>
-<blockquote>
-<p>inner peace</p>
-</blockquote>
-<p>对于我自己而言，我内心最安静地时候是在写作的时候，因此写博客有利于消除我内心的浮躁，安安静静做点事情。</p>
-<h3 id="职业所致">职业所致</h3><p>而对于一个靠技术吃饭的coder来说，技术变化日新月异，时不时就会有各种新技术出来，各种新技术需要学习。通过写技术博客这种方式，能够让自己沉下心来学习新技术，总结并思考，记录笔记，能达到事半功倍的效果，就算过一段时间忘了，回头看看自己的博客，沿着当时思考的路径，也能很快再次掌握。</p>
-<h3 id="总要记录点啥吧">总要记录点啥吧</h3><p>作为一个工科男，也允许我偶尔文艺下吧。虽然文笔拙略，但是好歹也是自己成长的一个见证，可以记录自己的心路历程，记录自己的成长故事，没有比这个更好地方式了。</p>
-<p>时候不早了，现在都凌晨12点20了，就写这么多吧，晚安。</p>
-
+<p>在此表示感谢。捣腾了一下午，顺带把Mardown学了下，总算是把博客搭建好了，剩下的就等着填充博客内容了（来日方长^_^）。<br>
       
     </div>
     
@@ -511,64 +502,9 @@
       
 
       
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/17/hello-world/" class="article-date">
-  	<time datetime="2015-07-17T15:36:41.000Z" itemprop="datePublished">2015-07-17</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/17/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
+        <p class="article-more-link">
+          <a  href="/2015/08/03/my-first-blog/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
